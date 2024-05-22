@@ -1,0 +1,13 @@
+<style>
+    button {
+        color: yellow;
+    }
+  </style>
+  
+  <ul>
+    <li *ngFor="let tarefa of tarefas; let i = index" [class.concluida]="tarefa.concluida">
+      {{ tarefa.descricao }}
+      <button (click)="toggleConcluida(i)">Concluir</button>
+    </li>
+  </ul>
+  

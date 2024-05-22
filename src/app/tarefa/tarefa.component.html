@@ -1,0 +1,7 @@
+<div *ngFor="let tarefa of tarefas">
+    <span [class.concluida]="tarefa.concluida">{{ tarefa.descricao }}</span>
+    <button (click)="concluirTarefa(tarefa)" [disabled]="tarefa.concluida">
+      {{ tarefa.concluida ? 'Concluída' : 'Concluir' }}
+    </button>
+  </div>
+  
